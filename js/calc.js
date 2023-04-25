@@ -129,5 +129,5 @@ $('input[type="number"]').bind('input', function () {
         All += 800*a;
     }
 
-    document.getElementById("result-erea").innerHTML = "<h3 class='text-danger'>合計" + Allnum + "点</h3>" + "<h3 class='text-danger'>" + All + "円</h3>";
+    document.getElementById("result-erea").innerHTML = "<h3 class='text-white'>合計" + Allnum + "点</h3>" + "<h3 class='text-white'>" + All + "円</h3>";
 });
