@@ -131,3 +131,12 @@ $('input[type="number"]').bind('input', function () {
 
     document.getElementById("result-erea").innerHTML = "<h3 class='text-white'>合計" + Allnum + "点</h3>" + "<h3 class='text-white'>" + All + "円</h3>";
 });
+
+function capture() {
+    html2canvas(document.querySelector("#capture")).then(canvas => {
+        //document.body.appendChild(canvas)
+        var imgData = canvas.toDataURL();
+        document.getElementById("sshot").href = imgData;
+        document.getElementById("imgmk").innerHTML = "画像を再作成";
+    });
+}

@@ -7,7 +7,7 @@
     <title>DXTEEN museum Goods計算機</title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    
+    <script src="./js/html2canvas.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- Google tag (gtag.js) -->
@@ -37,7 +37,7 @@
         
         
     </div>
-
+    <div id="capture">
         <div>
             <form class="form-group" uk-grid>
                     <h5>アクリルスタンド（上限6）</h5> 
@@ -103,10 +103,14 @@
                 </form>
         </div>
 
-        <div id="result-erea" class="text-center">
+        <div id="result-erea" class="text-center m-4">
 
         </div>
         
+    </div>
+    <div>
+        <button id="imgmk" onclick="capture();" class="btn back-dxtn">画像を作成</button>
+        <a id="sshot" href=""></a><button class="btn btn-light dxtn">画像ダウンロード</button></a>
     </div>
     <script src="./js/calc.js"></script>
 </body>
