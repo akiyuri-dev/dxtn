@@ -130,6 +130,7 @@ $('input[type="number"]').bind('input', function () {
     }
 
     document.getElementById("result-erea").innerHTML = "<h3 class='text-white'>合計" + Allnum + "点</h3>" + "<h3 class='text-white'>" + All + "円</h3>";
+    document.getElementById("result").innerHTML = "<h3 class='dxtn'>合計" + Allnum + "点</h3>" + "<h3 class='dxtn'>" + All + "円</h3>";
 });
 
 function capture() {
