@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DXTEEN museum Goods交換ツイート作成ジェネレータ</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/html2canvas.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B61Y4VWVP6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B61Y4VWVP6');
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark back-dxtn fixed-top" role="navigation">
+        <a href="/" id="top-text" class="navbar-brand">DXTEEN museum Goods<br>交換ツイート作成ジェネレータ</a>
+    </nav>
+    <div class="col-lg-5 offset-lg-1 bs-component form-group" style="padding-top: 9rem;">
+    
+        <div id="TOP" class="text-center">
+        
+            <h5 class="dxtn">
+                DXTEEN museum Goods<br>交換ツイート作成ジェネレータ
+            </h5>
+        <span><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></span>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        
+        
+    </div>
+    <div id="capture" class="container">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <br>
+                <h5>譲れるグッズの種類</h5>
+                <br>
+                <div class="form-check">
+                    <input value="通常トレカ" class="form-check-input y-val" type="checkbox" name="tt">
+                    <label for="tt">通常トレカ</label>
+                </div>
+                <div class="form-check">
+                    <input value="初回Aトレカ" class="form-check-input y-val" type="checkbox" name="at">
+                    <label for="at">初回Aトレカ</label>
+                </div>
+                <div class="form-check">
+                    <input value="初回Bトレカ" class="form-check-input y-val" type="checkbox" name="bt">
+                    <label for="bt">初回Bトレカ</label>
+                </div>
+                <div class="form-check">
+                    <input value="タワレコ特典" class="form-check-input y-val" type="checkbox" name="tw">
+                    <label for="tw">タワレコ特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="HMV特典" class="form-check-input y-val" type="checkbox" name="hmv">
+                    <label for="hmv">HMV特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="楽天特典" class="form-check-input y-val" type="checkbox" name="rt">
+                    <label for="rt">楽天特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="TSUTAYA特典" class="form-check-input y-val" type="checkbox" name="tn">
+                    <label for="tn">TSUTAYA特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="LAPONE ONLINE特典" class="form-check-input y-val" type="checkbox" name="lo">
+                    <label for="lo">LAPONE ONLINE特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="DXTEEN OFFICIAL特典" class="form-check-input y-val" type="checkbox" name="do">
+                    <label for="do">DXTEEN OFFICIAL特典</label>
+                </div>
+                <br>
+                <h5>譲れるメンバー</h5>
+                <br>
+                <div class="form-check">
+                    <input value="集合" class="form-check-input y-member" type="checkbox" name="ydxtn">
+                    <label for="ydxtn">集合</label>
+                </div>
+                <div class="form-check">
+                    <input value="大久保" class="form-check-input y-member" type="checkbox" name="yokubo">
+                    <label for="yokubo">大久保</label>
+                </div>
+                <div class="form-check">
+                    <input value="田中" class="form-check-input y-member" type="checkbox" name="ytanaka">
+                    <label for="ytanaka">田中</label>
+                </div>
+                <div class="form-check">
+                    <input value="谷口" class="form-check-input y-member" type="checkbox" name="ytaniguchi">
+                    <label for="ytaniguchi">谷口</label>
+                </div>
+                <div class="form-check">
+                    <input value="寺尾" class="form-check-input y-member" type="checkbox" name="yterao">
+                    <label for="yterao">寺尾</label>
+                </div>
+                <div class="form-check">
+                    <input value="平本" class="form-check-input y-member" type="checkbox" name="yhiramoto">
+                    <label for="yhiramoto">平本</label>
+                </div>
+                <div class="form-check">
+                    <input value="福田" class="form-check-input y-member" type="checkbox" name="yfukuda">
+                    <label for="yfukuda">福田</label>
+                </div>
+                <br>
+                <h5>求めているグッズの種類</h5>
+                <br>
+                <div class="form-check">
+                    <input value="同種" class="form-check-input m-val" type="checkbox" name="same">
+                    <label for="same">同種</label>
+                </div>
+                <div class="form-check">
+                    <input value="通常トレカ" class="form-check-input m-val" type="checkbox" name="tt">
+                    <label for="tt">通常トレカ</label>
+                </div>
+                <div class="form-check">
+                    <input value="初回Aトレカ" class="form-check-input m-val" type="checkbox" name="at">
+                    <label for="at">初回Aトレカ</label>
+                </div>
+                <div class="form-check">
+                    <input value="初回Bトレカ" class="form-check-input m-val" type="checkbox" name="bt">
+                    <label for="bt">初回Bトレカ</label>
+                </div>
+                <div class="form-check">
+                    <input value="タワレコ特典" class="form-check-input m-val" type="checkbox" name="tw">
+                    <label for="tw">タワレコ特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="HMV特典" class="form-check-input m-val" type="checkbox" name="hmv">
+                    <label for="hmv">HMV特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="楽天特典" class="form-check-input m-val" type="checkbox" name="rt">
+                    <label for="rt">楽天特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="TSUTAYA特典" class="form-check-input m-val" type="checkbox" name="tn">
+                    <label for="tn">TSUTAYA特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="LAPONE ONLINE特典" class="form-check-input m-val" type="checkbox" name="lo">
+                    <label for="lo">LAPONE ONLINE特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="DXTEEN OFFICIAL特典" class="form-check-input m-val" type="checkbox" name="do">
+                    <label for="do">DXTEEN OFFICIAL特典</label>
+                </div>
+                <br>
+                <h5>求めているメンバー</h5>
+                <br>
+                <div class="form-check">
+                    <input value="集合" class="form-check-input m-member" type="checkbox" name="mdxtn">
+                    <label for="mdxtn">集合</label>
+                </div>
+                <div class="form-check">
+                    <input value="大久保" class="form-check-input m-member" type="checkbox" name="mokubo">
+                    <label for="mokubo">大久保</label>
+                </div>
+                <div class="form-check">
+                    <input value="田中" class="form-check-input m-member" type="checkbox" name="mtanaka">
+                    <label for="mtanaka">田中</label>
+                </div>
+                <div class="form-check">
+                    <input value="谷口" class="form-check-input m-member" type="checkbox" name="mtaniguchi">
+                    <label for="mtaniguchi">谷口</label>
+                </div>
+                <div class="form-check">
+                    <input value="寺尾" class="form-check-input m-member" type="checkbox" name="mterao">
+                    <label for="mterao">寺尾</label>
+                </div>
+                <div class="form-check">
+                    <input value="平本" class="form-check-input m-member" type="checkbox" name="mhiramoto">
+                    <label for="mhiramoto">平本</label>
+                </div>
+                <div class="form-check">
+                    <input value="福田" class="form-check-input m-member" type="checkbox" name="mfukuda">
+                    <label for="mfukuda">福田</label>
+                </div>
+                <br>
+                <h5>取引方法</h5>
+                <br>
+                <div class="form-check">
+                    <input value="手渡し" class="form-check-input th" type="checkbox" name="tw">
+                    <label for="tw">手渡し</label>
+                </div>
+                <div class="form-check">
+                    <input value="郵送" class="form-check-input th" type="checkbox" name="ys">
+                    <label for="ys">郵送</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="border border-info mb-3">
+            <div id="yuzuru" class="">
+    
+            </div>
+            <div id="motomu" class="">
+            </div>
+            <div id="torihiki">
+
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <!--<button id="imgmk" onclick="gene();" class="btn back-dxtn">ツイート文章を作成</button>
+        <br>
+        <textarea id="result" class="mb-3"></textarea>
+        <br>-->
+        <a id="twlink" href="" target="_blank"><button id="tweet" disabled onclick="tweet();" class="btn btn-info">ツイートする</button></a>
+        <!--<button id="imgmk" onclick="capture();" class="btn back-dxtn">画像を作成</button>
+        <br>
+        <a id="sshot" href=""><button class="btn btn-light dxtn">長押しして画像ダウンロード</button></a>-->
+    </div>
+    <script src="./js/gene.js"></script>
+</body>
+</html>
