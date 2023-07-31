@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DXTEEN POP-UP STORE 109 Goods計算機</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/html2canvas.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B61Y4VWVP6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B61Y4VWVP6');
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark back-dxtn fixed-top" role="navigation">
+        <a href="/" id="top-text" class="navbar-brand">DXTEEN museum Goods計算機</a>
+    </nav>
+    <div class="col-lg-5 offset-lg-1 bs-component form-group" style="padding-top: 6rem;">
+    
+        <div id="TOP" class="text-center">
+        
+            <h5 class="dxtn">
+                DXTEEN POP-UP STORE Goods<br>計算機
+            </h5>
+        <span><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a></span>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        
+        
+    </div>
+    <div id="capture">
+        <div>
+            <form class="form-group" uk-grid>
+                <h5>トレーディングカード</h5>
+                <br>
+                <input class="form-control" pattern="\d*" type="number" placeholder="数量"　 name="card">
+                <br>
+                    <h5>アクリルスタンド</h5> 
+                    <br>
+                    <input class="form-control" pattern="\d*" type="number" placeholder="数量"　 name="acsta">
+                    <br>
+                    <h5>缶バッジ</h5>
+                    <br>
+                    <input class="form-control" pattern="\d*" type="number" placeholder="数量"　 name="cacba">
+                    <br><br>
+                    <h5>DXTEEN PHOTO</h5>
+                    <br>
+                    <input class="form-control" pattern="\d*" type="number" placeholder="数量"　 name="photo">
+                    <br>
+                    <h5>カードフィルム</h5>
+                    <br>
+                    <input class="form-control" pattern="\d*" type="number" placeholder="数量"　 name="film">
+                    <br>
+                    <h5>メモ</h5>
+                    <br>
+                    <input class="form-control" pattern="\d*" type="number" placeholder="数量"　 name="memo">
+                    <br>
+                </form>
+        </div>
+
+        <div id="result-erea" class="text-center">
+
+        </div>
+        <div id="result" class="text-center mb-3"></div>
+    </div>
+    <div>
+        <button id="imgmk" onclick="capture();" class="btn back-dxtn">画像を作成</button>
+        <br>
+        <a id="sshot" href=""><button class="btn btn-light dxtn">長押しして画像ダウンロード</button></a>
+    </div>
+    <script src="./js/calc109.js"></script>
+</body>
+</html>
