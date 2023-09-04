@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DXTEEN Goods交換ツイート作成ジェネレータ改</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/html2canvas.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B61Y4VWVP6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B61Y4VWVP6');
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark back-dxtn fixed-top" role="navigation">
+        <a href="/" id="top-text" class="navbar-brand">DXTEEN Goods<br>交換ツイート作成ジェネレータ改</a>
+        <span><a href="https://twitter.com/share" class="twitter-share-button">POST</a></span>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </nav>
+    <div id="capture" class="container" style="padding-top: 9rem;">
+        <div class="row">
+            <div id="selecter" class="col-10 offset-1">
+                <br>
+                <h5>譲れるグッズの種類</h5>
+                <br>
+                <div class="form-check">
+                    <input value="通常トレカ" class="form-check-input y-val" type="checkbox" name="tt">
+                    <label for="tt">通常トレカ</label>
+                </div>
+                <div class="form-check">
+                    <input value="初回Aトレカ" class="form-check-input y-val" type="checkbox" name="at">
+                    <label for="at">初回Aトレカ</label>
+                </div>
+                <div class="form-check">
+                    <input value="初回Bトレカ" class="form-check-input y-val" type="checkbox" name="bt">
+                    <label for="bt">初回Bトレカ</label>
+                </div>
+                <div class="form-check">
+                    <input value="タワレコ特典" class="form-check-input y-val" type="checkbox" name="tw">
+                    <label for="tw">タワレコ特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="HMV特典" class="form-check-input y-val" type="checkbox" name="hmv">
+                    <label for="hmv">HMV特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="楽天特典" class="form-check-input y-val" type="checkbox" name="rt">
+                    <label for="rt">楽天特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="TSUTAYA特典" class="form-check-input y-val" type="checkbox" name="tn">
+                    <label for="tn">TSUTAYA特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="LAPONE ONLINE特典" class="form-check-input y-val" type="checkbox" name="lo">
+                    <label for="lo">LAPONE ONLINE特典</label>
+                </div>
+                <div class="form-check">
+                    <input value="タワレコ渋谷フライヤー" class="form-check-input y-val" type="checkbox" name="do">
+                    <label for="do">タワレコ渋谷フライヤー</label>
+                </div>
+                <input type="hidden" id="nextPage" value="menber-y">
+            </div>
+            <div class="col-10 offset-1" id="nextErea">
+                <button id="next" onclick="next();" class="btn back-dxtn">次へ</button>
+                <br><br>
+            </div>
+            <div class="col-10 offset-1">
+                <button id="reset" onclick="reset();" class="btn btn-dark">リセット</button>
+                <br><br>
+            </div>
+
+    
+            <div class="col-10 offset-1 border border-info mb-3" id="result" style="display: none;">
+                
+                <div id="yuzuru" class="">【譲】</div>
+                <div id="motomu" class="">【求】</div>
+                <div id="torihiki">【取引方法】</div>
+    
+                <div id="headText">#DXTEEN交換</div>
+            </div>
+        </div>
+            <div class="text-right">
+                <a id="twlink" href="" target="_blank"><button id="tweet" onclick="tweet();"
+                        class="btn btn-info" style="display: none;">ポストする</button></a>
+                <!--<button id="imgmk" onclick="capture();" class="btn back-dxtn">画像を作成</button>
+            <br>
+            <a id="sshot" href=""><button class="btn btn-light dxtn">長押しして画像ダウンロード</button></a>-->
+            </div>
+    </div>
+    <script src="./js/gene2.js"></script>
+</body>
+</html>
